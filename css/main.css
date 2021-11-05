@@ -1,0 +1,156 @@
+/* root values */
+:root {
+    --fontFamilyCursive: 'Bebas Neue', cursive;
+    --fontFamilyOpen: 'Open Sans', sans-serif;
+
+    --fs: 14px;
+    --fm: 16px;
+    --color1: rgb(11, 172, 236);
+    --gradient: linear-gradient(90deg, rgb(56, 196, 252),rgb(15, 165, 224), rgb(29, 29, 255));
+    --txtColor: #ffffff;
+    --scrollColor: #ccc;
+}
+
+/* All elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamilyOpen);
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+}
+*::selection{
+    color: var(--txtColor);
+    background-color: var(--color1);
+}
+
+/* ELEMENTS */
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+    background-color: var;
+}
+html::-webkit-scrollbar-track{
+    background-color: var(--scrollColor);
+    border-radius: 1rem;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--color1);
+    border-radius: 1rem;
+}
+
+/* BODY */
+body {
+    height: 300rem;
+}
+/* header start */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gradient);
+    padding: 1.5rem 5%;
+    z-index: 1001;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+header .logo {
+    font-family: var(--fontFamilyCursive);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--txtColor);
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+header .navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .navbar ul li {
+    margin: 0 1rem;
+}
+header .navbar ul li a {
+    color: var(--txtColor);
+    font-size: 1.8rem;
+}
+header .navbar ul li a:hover, header .navbar ul li a.active {
+    color: #666;
+}
+header .login {
+    font-size: 3rem;
+    color: var(--txtColor);
+    cursor: pointer;
+}
+header .login:hover{
+    color: #444;
+}
+
+header #menu {
+    color: var(--txtColor);
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* media quieries */
+
+@media (max-width: 768px) {
+    html{
+        font-size: 50%;
+    }
+    header #menu {
+        display: block;
+    }
+    header .navbar {
+        position: fixed;
+        top: -120%;
+        left: 0;
+        width: 100%;
+        background-color: #444;
+    }
+    header .navbar ul {
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+    header .navbar ul li{
+        margin: 1.5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+    header .navbar ul li a {
+        font-size: 2.5rem;
+        display: block;
+    }
+    header .navbar ul li a.active, header .navbar ul li a:hover {
+        color: var(--color1);
+    }
+    .fa-times {
+        transform: rotate(180deg);
+    }
+    
+    header .navbar.nav-toggle{
+        top: 6.4rem;
+    }
+}
