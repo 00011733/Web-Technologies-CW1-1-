@@ -107,7 +107,95 @@ header #menu {
     display: none;
 }
 
+/* LOGIN form */
+.login-form{
+    height:100%;
+    width:100%;
+    position: fixed;
+    top:-120%; left: 0;
+    z-index: 1000;
+    background:rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.login-form.popup{
+    top:0;
+}
+
+.login-form form{
+    width:35rem;
+    background:#fff;
+    margin:0 2rem;
+    padding:1rem 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .3rem #333;
+    position: relative;
+}
+
+.login-form form h3{
+    font-size: 3rem;
+    color: var(--color1);
+    padding:1rem 0;
+}
+
+.login-form form .box{
+    width:100%;
+    padding:1rem 0;
+    margin:1rem 0;
+    border-bottom: .2rem solid #666;
+    font-size: 1.6rem;
+    color:#333;
+    text-transform: none;
+}
+
+.login-form form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.login-form form .box:focus{
+    border-color: var(--color1);
+}
+
+.login-form form .box:nth-child(3){
+    margin-bottom: 5rem;
+}
+
+.login-form form p{
+    font-size: 1.4rem;
+    color:#666;
+    padding:.5rem 0;
+}
+
+.login-form form p a{
+    color: var(--color1);
+}
+
+.login-form form .btn{
+    width: 100%;
+    padding: 1rem 0;
+    margin:2rem 0;
+    border-radius: 5px;
+    background-color: var(--color1);
+    color: var(--txtColor);
+}
+
+.login-form form .btn:hover{
+    background:#444;
+}
+
+.login-form form .fa-times{
+    position: absolute;
+    top:1.5rem; right:2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:#999;
+}
+
+.login-form form .fa-times:hover{
+    color:#444;
+}
 
 
 
